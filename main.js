@@ -43,8 +43,8 @@ function addKeyPowerIndex(array) {
  
  array.forEach((x,y)=>
  {
-   return x[y] = x**2;
-  })
+   return x[y] = y**2;
+  });
  console.log(array);
 }
 
