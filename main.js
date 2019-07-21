@@ -38,15 +38,23 @@ Ex: addKeyPowerIndex(arrOfObj2)
 ]   
 */
 
-function addKeyPowerIndex() {
+function addKeyPowerIndex(array) {
   // WRITE YOUR CODE UNDER THIS LINE  
-
+ 
+ array.forEach((x,y)=>
+ {
+   return x[y] = x**2;
+  })
+ console.log(array);
 }
 
+var arrOfObj2 = [
+  { a: 'cat' },
+  { b: 'dog' },
+  { c: 'duck' }
+]
 
-
-
-
+ addKeyPowerIndex(arrOfObj2);
 
 
 /* Q2:
@@ -64,14 +72,18 @@ Ex: decreseBy(arrOfNum1,-6)
 => [83, 11, 39]
 */
 
-function decreseBy() {
+function decreseBy(arr,num) {
   // WRITE YOUR CODE UNDER THIS LINE 
+  let out= arr.map(x=>
+    {
+      return x-num ;
+    });
 
+ console.log(out);
 }
 
-
-
-
+var arr = [77,5,33];
+decreseBy(arr,10);
 
 
 /* Q3:
@@ -102,10 +114,28 @@ Ex: nameLongerThan(arrOfObj4,6)
 ]
 */
 
-function nameLongerThan() {
-  // WRITE YOUR CODE UNDER THIS LINE         
-}
+function nameLongerThan(arr,num) {
+  // WRITE YOUR CODE UNDER THIS LINE   
 
+  var longer = arr.filter(x => 
+  {
+     if(num < x.name.length )
+     {
+      return x.name;
+     }
+    
+  });    
+
+  console.log(longer); 
+}
+var arrOfObj4 = [
+  { name: "alex" },
+  { name: "mercer"},
+  { name: "alice" },
+  { name: "zaheer"},
+  { name: "elizabeth"}
+];
+nameLongerThan(arrOfObj4,4);
 
 
 
@@ -133,9 +163,15 @@ Ex: avgLength(arrOfObj4,"food")
 => 6.8
 */
 
-function avgLength() {
+function avgLength(arr , str) {
   // WRITE YOUR CODE UNDER THIS LINE         
 
+  let avg= arr.reduce((x,y)=>{
+   
+   
+
+  },0);
+  console.log(avg/arr.length);
 }
 
 // Good luck :)
